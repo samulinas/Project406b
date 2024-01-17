@@ -6,13 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Опис проєкту">
     <meta name="keywords" content="Проєкт, ключові слова">
+    <meta name="robots" content="noindex, nofollow">
     <title>Project 406b</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <style>
+        * {
+            margin: 0;
+        }
+
         body {
             background: lightblue;
+        }
+
+        header {
+            background: pink;
+            text-align: center;
+        }
+        footer {
+            background: darkblue;
+        }
+        section {
+            background: lightgreen;
+        }
+        aside {
+            background: lightcoral;
+        }
+        div {
+            background: yellow;
         }
     </style>
     <script src="script.js"></script>
@@ -20,20 +42,74 @@
 </head>
 
 <body>
-    <h1>Заголовок 1 рівня</h1>
-    <h6>Заголовок 1 рівня</h6>
-    <a href="https://google.com">Google</a><br>
-    <abbr title="Гіпертекстова мова розмітки">HTML</abbr><br>
-    <address>Україна, Донецько обл., м. Краматорськ</address>
-    <p><b>Lorem ipsum</b> dolor sit amet </p>
-    <blockquote>consectetur adipisicing elit. Ullam et, perspiciatis</blockquote>
+    <header>
+        <h1>Заголовок 1 рівня</h1>
+        <nav>
+            <a href="https://google.com">Google</a>
+            <a href="contacts.html">Контакти</a>
+            <a href="#footer" target="_self">Якір</a>
+        </nav>
+    </header>
+    <main>
+    <section>
+    <h6>Заголовок 6 рівня</h6>
+    <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова розмітки</span>
+    <center>
+        <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
+    </center>
+    <blockquote cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em></blockquote>
     <p> natus ad ut omnis atque. Ipsa
-        tenetur dolorum odio, sed ex quibusdam <q>molestiae</q> cupiditate harum et eos, aliquam ullam!<br>
+        <del>tenetur dolorum</del> <ins>odio, sed ex</ins> quibusdam <q>molestiae</q> <s>cupiditate</s><u>harum</u> et
+        eos, <small>aliquam</small> <big>ullam!</big><br>
     </p>
     <cite>Джерело: google.com</cite><br>
     <code>Console.WriteLine("Hello World");</code><br>
     <samp>Hello World</samp><br>
-
+    <section>
+    <br><br>
+    <hr>
+    <br><br>
+    <section>
+        <div>
+    <time datetime="2023-05-14 00:00:00:000">14.05.2023</time>
+    <pre>Lorem ipsum dolor sit amet consectetur, adipisicing 
+        elit. Illo a ipsum neque ratione quasi omnis. Voluptatum
+        quaerat voluptatem voluptate, animi harum nisi id 
+        atque<sub>2</sub> dicta<sup>2</sup> commodi ipsum vel 
+        asperiores rerum?</pre>
+        </div>
+    <kbd>Enter</kbd>
+    jhtkjyjdgfdgfsfdsgfdkuyfljgli;iuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryury<wbr>tetriuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryurytetretrwrewtruytiy<wbr>oiulkjetrwrewtruytiyoiulkj,hjiuyuytyutrytred
+    <span><var>x</var> + <var>y</var> = <output>0</output></span>
+    <ul type="circle">
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+    <ol start="4" type="I">
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+    </ol>
+    <dl>
+        <dt>html</dt>
+        <dd>Гіпертекстова мова розмітки</dd>
+        <dt>css</dt>
+        <dd>Каскадна таблиця стилів</dd>
+        <dt>js</dt>
+        <dd>Скриптова мова програмування</dd>
+    </dl>
+    <aside>
+    <img src="picture.jpg" width="200" alt="Природа у JPG"><br>
+    <audio src="music.mp3" controls muted></audio><br>
+    <video src="" controls></video><br>
+    </aside>
+    </section>
+    </main>
+    <footer id="footer">
+        <iframe width="800" height="200" src="https://htmlreference.io/" frameborder="0"></iframe>
+        <address>Україна, Донецько обл., м. Краматорськ</address>
+    </footer>
 </body>
 
 </html>
