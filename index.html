@@ -24,17 +24,53 @@
             background: pink;
             text-align: center;
         }
+
         footer {
             background: darkblue;
         }
+
         section {
             background: lightgreen;
         }
+
         aside {
             background: lightcoral;
         }
-        div {
+
+        main {
+            display: flex;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        caption {
+            text-indent: 1.25cm;
+            text-align: left;
+        }
+
+        /*         thead {
             background: yellow;
+        }
+        tbody {
+            background: rgb(48, 184, 48);
+        }
+        tfoot {
+            background: pink;
+        } */
+        .col-1 {
+            background: yellow;
+        }
+
+        .col-2 {
+            background: pink;
         }
     </style>
     <script src="script.js"></script>
@@ -51,60 +87,122 @@
         </nav>
     </header>
     <main>
-    <section>
-    <h6>Заголовок 6 рівня</h6>
-    <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова розмітки</span>
-    <center>
-        <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
-    </center>
-    <blockquote cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em></blockquote>
-    <p> natus ad ut omnis atque. Ipsa
-        <del>tenetur dolorum</del> <ins>odio, sed ex</ins> quibusdam <q>molestiae</q> <s>cupiditate</s><u>harum</u> et
-        eos, <small>aliquam</small> <big>ullam!</big><br>
-    </p>
-    <cite>Джерело: google.com</cite><br>
-    <code>Console.WriteLine("Hello World");</code><br>
-    <samp>Hello World</samp><br>
-    <section>
-    <br><br>
-    <hr>
-    <br><br>
-    <section>
-        <div>
-    <time datetime="2023-05-14 00:00:00:000">14.05.2023</time>
-    <pre>Lorem ipsum dolor sit amet consectetur, adipisicing 
+        <section>
+            <article>
+                <h6>Заголовок 6 рівня</h6>
+                <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова
+                    розмітки</span>
+                <center>
+                    <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
+                </center>
+                <blockquote cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em>
+                </blockquote>
+                <p> natus ad ut omnis atque. Ipsa
+                    <del>tenetur dolorum</del> <ins>odio, sed ex</ins> quibusdam <q>molestiae</q>
+                    <s>cupiditate</s><u>harum</u> et
+                    eos, <small>aliquam</small> <big>ullam!</big><br>
+                </p>
+                <cite>Джерело: google.com</cite><br>
+                <code>Console.WriteLine("Hello World");</code><br>
+                <samp>Hello World</samp><br>
+            </article>
+            <br>
+            <hr>
+            <br>
+            <article>
+                <div>
+                    <time datetime="2023-05-14 00:00:00:000">14.05.2023</time>
+                    <pre>Lorem ipsum dolor sit amet consectetur, adipisicing 
         elit. Illo a ipsum neque ratione quasi omnis. Voluptatum
         quaerat voluptatem voluptate, animi harum nisi id 
         atque<sub>2</sub> dicta<sup>2</sup> commodi ipsum vel 
         asperiores rerum?</pre>
-        </div>
-    <kbd>Enter</kbd>
-    jhtkjyjdgfdgfsfdsgfdkuyfljgli;iuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryury<wbr>tetriuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryurytetretrwrewtruytiy<wbr>oiulkjetrwrewtruytiyoiulkj,hjiuyuytyutrytred
-    <span><var>x</var> + <var>y</var> = <output>0</output></span>
-    <ul type="circle">
-        <li>html</li>
-        <li>css</li>
-        <li>js</li>
-    </ul>
-    <ol start="4" type="I">
-        <li>html</li>
-        <li>css</li>
-        <li>js</li>
-    </ol>
-    <dl>
-        <dt>html</dt>
-        <dd>Гіпертекстова мова розмітки</dd>
-        <dt>css</dt>
-        <dd>Каскадна таблиця стилів</dd>
-        <dt>js</dt>
-        <dd>Скриптова мова програмування</dd>
-    </dl>
-    <aside>
-    <img src="picture.jpg" width="200" alt="Природа у JPG"><br>
-    <audio src="music.mp3" controls muted></audio><br>
-    <video src="" controls></video><br>
-    </aside>
-    </section>
+                </div>
+                <kbd>Enter</kbd>
+                jhtkjyjdgfdgfsfdsgfdkuyfljgli;iuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryury<wbr>tetriuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryurytetretrwrewtruytiy<wbr>oiulkjetrwrewtruytiyoiulkj,hjiuyuytyutrytred
+                <span><var>x</var> + <var>y</var> = <output>0</output></span>
+                <ul type="circle">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ul>
+                <ol start="4" type="I">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ol>
+                <dl>
+                    <dt>html</dt>
+                    <dd>Гіпертекстова мова розмітки</dd>
+                    <dt>css</dt>
+                    <dd>Каскадна таблиця стилів</dd>
+                    <dt>js</dt>
+                    <dd>Скриптова мова програмування</dd>
+                </dl>
+                <table>
+                    <caption>Таблиця 1 - Назва таблиці</caption>
+                    <colgroup>
+                        <col class="col-1" span="2">
+                        <col class="col-2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">1</th>
+                            <th rowspan="2">3</th>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td align="right" colspan="2">Результат</td>
+                            <td>3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <form action="handler.php">
+                    <input type="submit" value="Відправити">
+                </form>
+            </article>
+        </section>
+        <aside>
+            <figure>
+                <a href="https://google.com"><img src="picture.jpg" width="200" alt="Природа у JPG"></a>
+                <figcaption>Рисунок 1 - Природа у JPG</figcaption>
+            </figure>
+            <br>
+            <audio src="music.mp3" controls muted></audio><br>
+            <video src="video.mp4" width="300" poster="world-continents.png" controls></video><br>
+            <img src="world-continents.png" width="320" height="160" usemap="#world-continents">
+            <map name="world-continents">
+                <area title="North America" href="https://en.wikipedia.org/wiki/North_America" shape="poly"
+                    coords="48,89,67,69,77,49,140,0,68,0,6,10,4,31,16,69">
+                <area title="South America" href="https://en.wikipedia.org/wiki/South_America" shape="poly"
+                    coords="48,88,61,74,119,99,95,160,66,159">
+                <area title="Europe" href="https://en.wikipedia.org/wiki/Europe" shape="poly"
+                    coords="124,49,145,46,158,50,187,43,198,6,146,1,115,21">
+                <area title="Africa" href="https://en.wikipedia.org/wiki/Africa" shape="poly"
+                    coords="121,53,140,47,169,51,186,77,196,80,188,137,156,136,138,97,118,86">
+                <area title="Asia" href="https://en.wikipedia.org/wiki/Asia" shape="poly"
+                    coords="166,50,184,77,201,74,215,91,258,108,263,87,283,74,297,8,192,3,191,29,187,46,170,42">
+                <area title="Australia" href="https://en.wikipedia.org/wiki/Australia_(continent)" shape="poly"
+                    coords="257,107,263,85,314,89,316,137,294,151,249,132,248,114">
+            </map>
+        </aside>
     </main>
     <footer id="footer">
         <iframe width="800" height="200" src="https://htmlreference.io/" frameborder="0"></iframe>
