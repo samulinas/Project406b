@@ -72,6 +72,10 @@
         .col-2 {
             background: pink;
         }
+
+        canvas {
+            border: 1px solid black;
+        }
     </style>
     <script src="script.js"></script>
     <noscript>У вас не підтримується JS!</noscript>
@@ -174,9 +178,107 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="handler.php">
+                <form action="" novalidate>
+                    <input autocomplete="off" type="text" name="text" id="text-text" list="list-1">
+                    <datalist id="list-1">
+                        <optgroup label="Кольори">
+                            <option value="Чорний">Чорний</option>
+                            <option value="Червоний">Червоний</option>
+                            <option value="Зелений">Зелений</option>
+                            <option value="Синій">Синій</option>
+                        </optgroup>
+                        <optgroup label="Тварини">
+                            <option value="Кіт">Кіт</option>
+                            <option value="Собака">Собака</option>
+                            <option value="Хом'як">Хом'як</option>
+                        </optgroup>
+                    </datalist>
+                    <select size="3" name="select" id="select" multiple>
+                        <optgroup label="Кольори">
+                            <option value="Чорний">Чорний</option>
+                            <option value="Зелений">Зелений</option>
+                            <option value="Синій">Синій</option>
+                        </optgroup>
+                        <optgroup label="Тварини">
+                            <option value="Кіт">Кіт</option>
+                            <option value="Собака">Собака</option>
+                            <option value="Хом'як">Хом'як</option>
+                        </optgroup>
+                    </select>
+
+                    <textarea name="textarea" id="textarea" cols="30" rows="5" wrap="hard" minlength="10"
+                        maxlength="200">Довільний текст за замовчуванням</textarea>
+                    <button type="button"><img height="50" src="picture.jpg" alt="Picture"></button>
+                    <input type="url" name="url" id="url" required>
+                    <input type="email" name="email" id="email" required>
+                    <input type="tel" name="tel" id="tel">
+                    <input type="search" name="search" id="search">
+                    <input type="color" name="color" id="color">
+                    <input type="password" name="password" id="password">
+                    <span>1</span><input type="range" name="range" id="range"><span>10</span>
+                    <input type="hidden" name="hidden" value="12">
+                    <input type="text" name="text" id="text" maxlength="10" placeholder="Введіть ім'я" value="Hello"
+                        disabled required>
+                    <input type="number" name="number" id="number" min="0" max="10" step="0.5" required>
+
+                    <fieldset>
+                        <legend>Прапорці</legend>
+                        <label for="checkbox-1">Пункт 1</label>
+                        <input type="checkbox" name="checkbox" id="checkbox-1" checked>
+                        <label for="checkbox-2">Пункт 2</label>
+                        <input type="checkbox" name="checkbox" id="checkbox-2">
+                        <label for="checkbox-3">Пункт 3</label>
+                        <input type="checkbox" name="checkbox" id="checkbox-3">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Перемикачі</legend>
+                        <label for="radio-1">Пункт 1</label>
+                        <input type="radio" name="radio" id="radio-1" checked>
+                        <label for="radio-2">Пункт 2</label>
+                        <input type="radio" name="radio" id="radio-2">
+                        <label for="radio-3">Пункт 3</label>
+                        <input type="radio" name="radio" id="radio-3">
+                    </fieldset>
+
+                    <input type="datetime" name="datetime" id="datetime">
+                    <input type="date" name="date" id="date">
+                    <input type="time" name="time" id="time">
+                    <input type="month" name="month" id="month">
+                    <input type="week" name="week" id="week">
+                    <input type="file" name="file" id="file" accept="audio/*" multiple>
+                    <input type="reset" value="Скинути дані">
+                    <input type="button" value="Кнопка">
                     <input type="submit" value="Відправити">
                 </form>
+                <canvas id="canvas" width="100" height="100">
+                    Fallback text for non-supported browsers
+                </canvas>
+                <script>
+                    function draw() {
+                        const canvas = document.getElementById("canvas");
+                        if (canvas.getContext) {
+                            const ctx = canvas.getContext("2d");
+
+                            ctx.fillStyle = "rgb(200 0 0)";
+                            ctx.fillRect(10, 10, 50, 50);
+
+                            ctx.fillStyle = "rgb(0 0 200 / 50%)";
+                            ctx.fillRect(30, 30, 50, 50);
+                        }
+                    }
+                    draw();
+                </script>
+                <details>
+                    <summary>Read more</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+                    </p>
+                </details>
+                <dialog open>
+                    This is a dialog box!
+                </dialog>
+                <meter min="0" low="16" high="92" value="50"  max="100">Alex</meter>
+                <progress value="71" max="100">Alex</progress>
             </article>
         </section>
         <aside>
