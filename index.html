@@ -64,7 +64,7 @@
         }
         tfoot {
             background: pink;
-        } */
+        } 
         .col-1 {
             background: yellow;
         }
@@ -72,7 +72,7 @@
         .col-2 {
             background: pink;
         }
-
+*/
         canvas {
             border: 1px solid black;
         }
@@ -82,10 +82,12 @@
 </head>
 
 <body>
-    <header style="background: red;">
+    <header class="header-main" style="background: red;">
         <h1 contenteditable="true">Заголовок 1 рівня</h1>
+        <a href="#form" target="_self"> Окреме посилання</a>
+        <a href="#text" target="_self"> Окреме посилання 2</a>
         <nav class="nav-header">
-            <a id="google" href="https://google.com">Google</a>
+            <a class="google" href="https://google.com">Google</a>
             <a href="contacts.html">Контакти</a>
             <a href="#footer" target="_self">Якір</a>
         </nav>
@@ -94,6 +96,7 @@
         <section>
             <article>
                 <h6 dir="rtl">Заголовок 6 рівня</h6>
+                <p></p>
                 <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова
                     розмітки</span>
                 <center>
@@ -125,23 +128,30 @@
                 <kbd>Enter</kbd>
                 jhtkjyjdgfdgfsfdsgfdkuyfljgli;iuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryury<wbr>tetriuhkhjklkjghgdhgfsfshkjhkjhiuyiuyuyryurytetretrwrewtruytiy<wbr>oiulkjetrwrewtruytiyoiulkj,hjiuyuytyutrytred
                 <span><var>x</var> + <var>y</var> = <output>0</output></span>
+                <ol class="ol-not" start="1" type="I">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ol>
                 <ul type="circle">
                     <li>html</li>
                     <li>css</li>
                     <li>js</li>
                 </ul>
                 <ol start="4" type="I">
-                    <li>html</li>
-                    <li>css</li>
-                    <li>js</li>
+                    <li>php</li>
                 </ol>
+                <dl>
+                    <dt>php</dt>
+                    <dd>Серверна мова програмування</dd>
+                </dl>
                 <dl>
                     <dt>html</dt>
                     <dd>Гіпертекстова мова розмітки</dd>
                     <dt>css</dt>
                     <dd>Каскадна таблиця стилів</dd>
                     <dt>js</dt>
-                    <dd>Скриптова мова програмування</dd>
+                    <dd>Скриптова та клієнтська мова програмування</dd>
                 </dl>
                 <table>
                     <caption>Таблиця 1 - Назва таблиці</caption>
@@ -178,7 +188,9 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="" novalidate>
+                <form id="form" action="" novalidate>
+                    <input type="email" name="email" id="email" required>
+                    <input type="number" name="number" id="number" min="0" max="10" step="0.5" required>
                     <input autocomplete="off" type="text" name="text" id="text-text" list="list-1">
                     <datalist id="list-1">
                         <optgroup label="Кольори">
@@ -210,7 +222,6 @@
                         maxlength="200">Довільний текст за замовчуванням</textarea>
                     <button type="button"><img height="50" src="picture.jpg" alt="Picture"></button>
                     <input type="url" name="url" id="url" required>
-                    <input type="email" name="email" id="email" required>
                     <input type="tel" name="tel" id="tel">
                     <input type="search" name="search" id="search">
                     <input type="color" name="color" id="color">
@@ -220,7 +231,6 @@
                     <input type="text" name="text" id="text" maxlength="10" placeholder="Введіть ім'я" value="Hello"
                         disabled required>
                     <input type="text" name="text" id="text-2" maxlength="10" placeholder="Введіть ім'я">
-                    <input type="number" name="number" id="number" min="0" max="10" step="0.5" required>
 
                     <fieldset>
                         <legend>Прапорці</legend>
@@ -232,7 +242,7 @@
                         <input type="checkbox" name="checkbox" id="checkbox-3">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="fieldset-nth">
                         <legend>Перемикачі</legend>
                         <label for="radio-1">Пункт 1</label>
                         <input type="radio" name="radio" id="radio-1" checked>
@@ -270,6 +280,12 @@
                     }
                     draw();
                 </script>
+                <form class="form-new" action="">
+                    <input type="text" name="" id="" placeholder="Введіть тему повідомлення" value="Важлива тема" readonly><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Введіть повідомлення" required></textarea><br>
+                    <input type="url" name="" id="" placeholder="Введіть url" required><br>
+                    <input type="submit" value="Відправити">
+                </form>
                 <details>
                     <summary>Read more</summary>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.

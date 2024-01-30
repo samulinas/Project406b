@@ -1,33 +1,115 @@
 body {
-    background: gray;
+  background: gray;
 }
 header {
-    background: peru;
+  background: peru;
 }
-:focus {
-    outline: 10px solid rgb(0, 149, 255);
-}
-.nav-header {
-    background: pink;
+input:focus {
+  outline: 10px solid rgb(0, 149, 255);
 }
 #google {
-    background: palevioletred !important;
+  background: palevioletred !important;
 }
 [href="contacts.html"] {
-    background: papayawhip;
+  background: papayawhip;
 }
-#google:hover {
-    background: rgb(131, 17, 55);
-}
-.nav-header > a:last-child {
-    background: goldenrod;
-}
- #google ~ a {
-    background: rgb(14, 125, 235);
+.google:hover {
+  background: rgb(131, 17, 55);
 }
 ::placeholder {
-    color: red;
+  color: red;
 }
-
-
-
+.header-main a {
+  background: goldenrod;
+}
+header.header-main > a {
+  background: rgb(11, 202, 129);
+}
+h1 ~ nav {
+  background: rgb(179, 13, 208);
+}
+h1 + a {
+  background: rgb(210, 18, 169) !important;
+}
+a:active {
+  color: white;
+}
+input[type="checkbox"]:checked {
+  width: 50px;
+  height: 50px;
+}
+input:default {
+  box-shadow: 0 0 2px 1px coral;
+}
+:disabled {
+  background: darkblue;
+}
+:enabled {
+  background: whitesmoke;
+}
+p:empty {
+  padding-top: 50px;
+}
+p:empty::after {
+  content: url(/favicon.ico);
+}
+ul > li:first-child {
+  background: rgb(90, 220, 15);
+}
+ul > li:last-child {
+  background: rgb(15, 15, 220);
+}
+ul > li:nth-child(2) {
+  background: rgb(15, 206, 220);
+}
+dl > :first-of-type {
+  background: pink;
+}
+dl > :last-of-type {
+  background: rgb(102, 16, 30);
+}
+dl > :nth-of-type(2) {
+  background: green;
+}
+ol > li:only-child {
+  background: rgb(154, 174, 175);
+}
+dl > :only-of-type {
+  background: rgb(179, 13, 208);
+}
+input[type="number"]:in-range {
+  background: green;
+}
+input[type="number"]:out-of-range {
+  background: red;
+}
+input[type="email"]:invalid {
+  background: red;
+}
+input[type="email"]:valid {
+  background: green;
+}
+:link {
+  color: white;
+}
+:visited {
+    color: yellow;
+  }
+.ol-not > li:not(:nth-child(2)) {
+  background: rgb(102, 16, 30);
+}
+tr > td:nth-last-child(1) {
+  background: yellow;
+}
+.fieldset-nth > :nth-last-of-type(1) {
+  outline: 5px solid orange;
+}
+.form-new > :optional {
+  background: orange;
+}
+.form-new > :required {
+  background: rgb(14, 94, 207);
+}
+.form-new > input[type="text"]:read-only {
+    color: white;
+}
