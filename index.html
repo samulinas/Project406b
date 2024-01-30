@@ -82,10 +82,10 @@
 </head>
 
 <body>
-    <header>
-        <h1>Заголовок 1 рівня</h1>
-        <nav>
-            <a href="https://google.com">Google</a>
+    <header style="background: red;">
+        <h1 contenteditable="true">Заголовок 1 рівня</h1>
+        <nav class="nav-header">
+            <a id="google" href="https://google.com">Google</a>
             <a href="contacts.html">Контакти</a>
             <a href="#footer" target="_self">Якір</a>
         </nav>
@@ -93,13 +93,13 @@
     <main>
         <section>
             <article>
-                <h6>Заголовок 6 рівня</h6>
+                <h6 dir="rtl">Заголовок 6 рівня</h6>
                 <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова
                     розмітки</span>
                 <center>
                     <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
                 </center>
-                <blockquote cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em>
+                <blockquote accesskey="h" cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em>
                 </blockquote>
                 <p> natus ad ut omnis atque. Ipsa
                     <del>tenetur dolorum</del> <ins>odio, sed ex</ins> quibusdam <q>molestiae</q>
@@ -206,7 +206,7 @@
                         </optgroup>
                     </select>
 
-                    <textarea name="textarea" id="textarea" cols="30" rows="5" wrap="hard" minlength="10"
+                    <textarea lang="uk" spellcheck="true" name="textarea" id="textarea" cols="30" rows="5" wrap="hard" minlength="10"
                         maxlength="200">Довільний текст за замовчуванням</textarea>
                     <button type="button"><img height="50" src="picture.jpg" alt="Picture"></button>
                     <input type="url" name="url" id="url" required>
@@ -219,6 +219,7 @@
                     <input type="hidden" name="hidden" value="12">
                     <input type="text" name="text" id="text" maxlength="10" placeholder="Введіть ім'я" value="Hello"
                         disabled required>
+                    <input type="text" name="text" id="text-2" maxlength="10" placeholder="Введіть ім'я">
                     <input type="number" name="number" id="number" min="0" max="10" step="0.5" required>
 
                     <fieldset>

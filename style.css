@@ -1,3 +1,33 @@
 body {
     background: gray;
 }
+header {
+    background: peru;
+}
+:focus {
+    outline: 10px solid rgb(0, 149, 255);
+}
+.nav-header {
+    background: pink;
+}
+#google {
+    background: palevioletred !important;
+}
+[href="contacts.html"] {
+    background: papayawhip;
+}
+#google:hover {
+    background: rgb(131, 17, 55);
+}
+.nav-header > a:last-child {
+    background: goldenrod;
+}
+ #google ~ a {
+    background: rgb(14, 125, 235);
+}
+::placeholder {
+    color: red;
+}
+
+
+
