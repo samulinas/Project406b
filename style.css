@@ -50,9 +50,6 @@ input:default {
 p:empty {
   padding-top: 50px;
 }
-p:empty::after {
-  content: url(/favicon.ico);
-}
 ul > li:first-child {
   background: rgb(90, 220, 15);
 }
@@ -93,8 +90,8 @@ input[type="email"]:valid {
   color: white;
 }
 :visited {
-    color: yellow;
-  }
+  color: yellow;
+}
 .ol-not > li:not(:nth-child(2)) {
   background: rgb(102, 16, 30);
 }
@@ -111,5 +108,70 @@ tr > td:nth-last-child(1) {
   background: rgb(14, 94, 207);
 }
 .form-new > input[type="text"]:read-only {
-    color: white;
+  color: white;
+}
+nav {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin: 5px 6px 7px 8px;
+  /*   margin-top: 5px; */
+  /* padding: 5px; */
+  padding-top: 10px;
+  box-sizing: border-box;
+  visibility: visible;
+}
+@media all and (max-width: 1200px) {
+  section {
+    background: rgb(250, 226, 177);
+  }
+}
+@media all and (max-height: 600px) {
+  header {
+    background: white;
+  }
+}
+.img {
+  position: sticky;
+  left: 10px;
+  top: 10px;
+}
+.container {
+  height: 100px;
+  border: 1px solid green;
+}
+.container > div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+.container > :nth-child(1) {
+  float: left;
+  z-index: 2;
+}
+.container > :nth-child(2) {
+  float: left;
+  margin-left: -50px;
+  background: green;
+  z-index: 1;
+}
+.container > :nth-child(3) {
+  width: 250px;
+  float: right;
+  background-color: hsla(0, 100%, 50%, .5);
+  background-image: radial-gradient(circle, #0093E9, #80D0C7);
+  background-image: url(/picture.jpg);
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
+  background-clip: padding-box;
+  border: 10px solid rgba(22, 231, 22, 0.5);
+  box-sizing: border-box;
+  color: white;
+}
+center {
+  clear: both;
 }
