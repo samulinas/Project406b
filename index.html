@@ -10,71 +10,13 @@
     <title>Project 406b</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <base target="_blank">
     <style>
         * {
             margin: 0;
-        }
-
-        body {
-            background: lightblue;
-        }
-
-        header {
-            background: pink;
-            text-align: center;
-        }
-
-        footer {
-            background: darkblue;
-        }
-
-        section {
-            background: lightgreen;
-        }
-
-        aside {
-            background: lightcoral;
-        }
-
-        main {
-            display: flex;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        caption {
-            text-indent: 1.25cm;
-            text-align: left;
-        }
-
-        /*         thead {
-            background: yellow;
-        }
-        tbody {
-            background: rgb(48, 184, 48);
-        }
-        tfoot {
-            background: pink;
-        } 
-        .col-1 {
-            background: yellow;
-        }
-
-        .col-2 {
-            background: pink;
-        }
-*/
-        canvas {
-            border: 1px solid black;
         }
     </style>
     <script src="script.js"></script>
@@ -86,6 +28,7 @@
         <h1 contenteditable="true">Заголовок 1 рівня</h1>
         <a href="#form" target="_self"> Окреме посилання</a>
         <a href="#text" target="_self"> Окреме посилання 2</a>
+        <br>
         <nav class="nav-header">
             <a class="google" href="https://google.com">Google</a>
             <a href="contacts.html">Контакти</a>
@@ -97,18 +40,18 @@
             <img class="img" src="/favicon.ico" alt="favicon">
             <article>
                 <h6 dir="rtl">Заголовок 6 рівня</h6>
-                <p></p>
+                <p>рарпа</p>
                 <br>
                 <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span> - Гіпертекстова мова
                     розмітки</span>
                 <div class="container">
                     <div>1</div>
                     <div>2</div>
-                    <div><b>Hello World</b></div>
                 </div>
                 <center>
                     <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
                 </center>
+                <div class="bg-prop"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor.</b></div>
                 <blockquote accesskey="h" cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em>
                 </blockquote>
                 <p> natus ad ut omnis atque. Ipsa
@@ -125,7 +68,8 @@
             <br>
             <article>
                 <div>
-                    <time datetime="2023-05-14 00:00:00:000">14.05.2023</time>
+                    <time class="main-time" datetime="2023-05-14 00:00:00:000">14.05.2023</time>
+                    <time id="unic-time" datetime="2024-06-15 00:00:00:000">15.06.2024</time>
                     <pre>Lorem ipsum dolor sit amet consectetur, adipisicing 
         elit. Illo a ipsum neque ratione quasi omnis. Voluptatum
         quaerat voluptatem voluptate, animi harum nisi id 
@@ -141,9 +85,9 @@
                     <li>js</li>
                 </ol>
                 <ul type="circle">
-                    <li>html</li>
-                    <li>css</li>
-                    <li>js</li>
+                    <li>html 1</li>
+                    <li>css 2</li>
+                    <li>js 3</li>
                 </ul>
                 <ol start="4" type="I">
                     <li>php</li>
@@ -178,12 +122,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
+                            <td rowspan="2">1</td>
+                            <td colspan="2">2</td>
                         </tr>
                         <tr>
-                            <td>1</td>
                             <td>2</td>
                             <td>3</td>
                         </tr>
@@ -212,7 +154,7 @@
                             <option value="Хом'як">Хом'як</option>
                         </optgroup>
                     </datalist>
-                    <select size="3" name="select" id="select" multiple>
+                    <select name="select" id="select">
                         <optgroup label="Кольори">
                             <option value="Чорний">Чорний</option>
                             <option value="Зелений">Зелений</option>

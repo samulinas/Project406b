@@ -1,7 +1,89 @@
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Black.woff) format("woff");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Ultrabold.woff) format("woff");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Bold.woff) format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Medium.woff) format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Regular.woff) format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Light.woff) format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-UltraLight.woff) format("woff");
+  font-weight: 200;
+}
 body {
   background: gray;
 }
+body {
+  background: lightblue;
+}
+footer {
+  background: darkblue;
+}
+section {
+  background: lightgreen;
+}
+aside {
+  background: lightcoral;
+}
+main {
+  display: flex;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  width: 100%;
+}
+caption {
+  text-indent: 1.25cm;
+  text-align: left;
+}
+/*  thead {
+  background: yellow;
+}
+tbody {
+  background: rgb(48, 184, 48);
+}
+tfoot {
+  background: pink;
+} 
+.col-1 {
+  background: yellow;
+}
+.col-2 {
+  background: pink;
+}
+*/
+canvas {
+  border: 1px solid black;
+}
 header {
+  text-align: center;
   background: peru;
 }
 input:focus {
@@ -39,13 +121,14 @@ input[type="checkbox"]:checked {
   height: 50px;
 }
 input:default {
-  box-shadow: 0 0 2px 1px coral;
+  width: 50px;
+  height: 50px;
 }
 :disabled {
   background: darkblue;
 }
 :enabled {
-  background: whitesmoke;
+  background: rgb(243, 222, 222);
 }
 p:empty {
   padding-top: 50px;
@@ -110,16 +193,21 @@ tr > td:nth-last-child(1) {
 .form-new > input[type="text"]:read-only {
   color: white;
 }
+
 nav {
   display: inline-block;
+/*   margin: 5px 5px 10px 15px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 15px;
   width: 200px;
-  height: 30px;
-  margin: 5px 6px 7px 8px;
-  /*   margin-top: 5px; */
-  /* padding: 5px; */
-  padding-top: 10px;
+  height: 50px;
+  padding: 10px;
   box-sizing: border-box;
   visibility: visible;
+  border: 10px dashed black;
+  outline: 10px solid green;;
 }
 @media all and (max-width: 1200px) {
   section {
@@ -131,47 +219,89 @@ nav {
     background: white;
   }
 }
-.img {
-  position: sticky;
-  left: 10px;
-  top: 10px;
-}
 .container {
+  position: relative;
   height: 100px;
   border: 1px solid green;
+  background: rgba(22, 231, 22, 0.2);
+  top: 0;
 }
 .container > div {
-  position: relative;
   width: 100px;
   height: 100px;
   background: pink;
 }
 .container > :nth-child(1) {
+  position: absolute;
+  top: 0;
   float: left;
   z-index: 2;
+  opacity: 0.9;
 }
 .container > :nth-child(2) {
-  float: left;
+  float: right;
   margin-left: -50px;
-  background: green;
+  background: linear-gradient(99deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   z-index: 1;
 }
-.container > :nth-child(3) {
-  width: 250px;
-  float: right;
-  background-color: hsla(0, 100%, 50%, .5);
-  background-image: radial-gradient(circle, #0093E9, #80D0C7);
-  background-image: url(/picture.jpg);
-  background-size: cover;
-  background-position: bottom left;
+.bg-prop {
+  margin: 20px;
+  width: 400px;
+  height: 250px;
+/*   background-color: azure;
+  background-image: url("picture.jpg");
+  background-size: 400px 100%;
+  background-position: top left;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-clip: border-box;
+  background-attachment: local; */
+  background: azure url("picture.jpg") center / 380px 100% no-repeat padding-box local;
   padding: 10px;
-  background-clip: padding-box;
-  border: 10px solid rgba(22, 231, 22, 0.5);
+  /* border: 10px solid rgba(22, 231, 22, 0.5); */
+  border-width: 10px;
+  border-top-width: 5px;
+  border-bottom-width: 25px;
+  border-right-width: 35px;
+  border-left-width: 15px;
+  border-style: solid;
+  border-top-style: dashed;
+  border-bottom-style: dotted;
+  border-right-style: hidden;
+  border-left-style: double;
+  border-color:rgba(0, 52, 238, 0.6);
+  border-top-color: rgba(0, 52, 238, 0.6);
+  border-bottom-color: green;
+  border-right-color: #fff;
+  border-left-color: hsl(0, 100%, 50%);
+  /* border-radius: 50px; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 70px;
+  /* outline: 10px solid green; */
+  outline-width: 10px;
+  outline-style: solid;
+  outline-color: aqua;
+  outline-offset: 10px;
   box-sizing: border-box;
   color: white;
+  box-shadow: 4px 4px 15px black;
+/*   font-family: "Neue Machina", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  font-variant: normal;
+  line-height: 1; */
+  font: italic normal 700 25px/1 "Comic Neue";
+  text-align: justify;
+  hyphens: auto;
 }
 center {
   clear: both;
+}
+time {
+  border: 10px solid pink;
+}
+.main-time, #unic-time {
+  border: 5px solid red;
 }
