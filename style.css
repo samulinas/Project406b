@@ -292,9 +292,24 @@ nav {
   font-style: italic;
   font-variant: normal;
   line-height: 1; */
-  font: italic normal 700 25px/1 "Comic Neue";
-  text-align: justify;
+  font: italic normal 900 25px/1 "Neue Machina";
+  text-align: left;
   hyphens: auto;
+  text-shadow: 4px 4px 15px black;
+  text-transform: capitalize;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #0000ff;
+  text-decoration-thickness: 2px;
+  /* text-decoration: line-through dashed chocolate 3px; */
+  text-indent: 1.25cm;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  white-space: pre-wrap;
+}
+.bg-prop > span {
+  font: inherit;
+  text-emphasis: "/" blue;
 }
 center {
   clear: both;
@@ -304,4 +319,31 @@ time {
 }
 .main-time, #unic-time {
   border: 5px solid red;
+}
+h1 {
+  caret-color: red;
+  cursor: pointer;
+  color: white;
+  opacity: 0.8;
+}
+.hypertext {
+  user-select: none;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+textarea {
+  resize: both;
+}
+img {
+  pointer-events: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  caption-side: bottom;
+  empty-cells: hide;
+}
+td {
+  vertical-align: bottom;
+  table-layout: auto;
 }
