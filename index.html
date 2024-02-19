@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <base target="_blank">
     <style>
         * {
@@ -42,16 +44,22 @@
                 <h6 dir="rtl">Заголовок 6 рівня</h6>
                 <p>рарпа</p>
                 <br>
-                <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span class="hypertext">Гіпертекст</span>
+                <abbr title="Гіпертекстова мова розмітки"><dfn>HTML</dfn></abbr><span
+                    class="hypertext">Гіпертекст</span>
                 <div class="container">
                     <div>1</div>
                     <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
                 </div>
                 <center>
                     <p><b>Lorem ipsum</b> dolor <strong>sit amet</strong></p>
                 </center>
-                <div class="bg-prop">Lor<span>e</span>m ipsum dolor              sit amet consec &hyphen; tetur adipisicing elit. Lorem ipsum dolor.</div>
-                <blockquote accesskey="h" cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et, perspiciatis</em>
+                <div class="bg-prop">Lor<span>e</span>m ipsum dolor sit amet consec &hyphen; tetur adipisicing elit.
+                    Lorem ipsum dolor.</div>
+                <blockquote accesskey="h" cite="https://google.com"><i>consectetur</i> adipisicing elit. <em>et,
+                        perspiciatis</em>
                 </blockquote>
                 <p> natus ad ut omnis atque. Ipsa
                     <del>tenetur dolorum</del> <ins>odio, sed ex</ins> quibusdam <q>molestiae</q>
@@ -66,6 +74,13 @@
             <hr>
             <br>
             <article>
+                <div class="flex-block">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
                 <div>
                     <time class="main-time" datetime="2023-05-14 00:00:00:000">14.05.2023</time>
                     <time id="unic-time" datetime="2024-06-15 00:00:00:000">15.06.2024</time>
@@ -111,7 +126,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th colspan="2">1</th>
+                            <th colspan="2"></th>
                             <th rowspan="2">3</th>
                         </tr>
                         <tr>
@@ -121,11 +136,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td rowspan="2">1</td>
+                            <td rowspan="2">
+                                <ol class="ol-list">
+                                    <li>list, table, column, text</li>
+                                    <li>transition, animaition, transform</li>
+                                    <li>flex, grid</li>
+                                </ol>
+                            </td>
                             <td colspan="2">2</td>
                         </tr>
                         <tr>
-                            <td>2</td>
+                            <td class="td-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui dolorem
+                                quam natus tempore inventore iure sit placeat libero laudantium doloribus. Omnis numquam
+                                odit explicabo, asperiores odio beatae inventore? Rem, rerum.<div>Amet consectetur
+                                    adipisicing elit</div>. Natus dicta porro architecto, molestiae aliquid incidunt,
+                                consequuntur odit ut libero soluta debitis reiciendis itaque iure, sapiente veritatis
+                                asperiores quam quas enim. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dolorum expedita exercitationem eius odit fugit numquam modi natus aut aperiam. Officiis
+                                incidunt tenetur vero adipisci.</td>
                             <td>3</td>
                         </tr>
                     </tbody>
@@ -166,8 +194,8 @@
                         </optgroup>
                     </select>
 
-                    <textarea lang="uk" spellcheck="true" name="textarea" id="textarea" cols="30" rows="5" wrap="hard" minlength="10"
-                        maxlength="200">Довільний текст за замовчуванням</textarea>
+                    <textarea lang="uk" spellcheck="true" name="textarea" id="textarea" cols="30" rows="5" wrap="hard"
+                        minlength="10" maxlength="200">Довільний текст за замовчуванням</textarea>
                     <button type="button"><img height="50" src="picture.jpg" alt="Picture"></button>
                     <input type="url" name="url" id="url" required>
                     <input type="tel" name="tel" id="tel">
@@ -229,8 +257,10 @@
                     draw();
                 </script>
                 <form class="form-new" action="">
-                    <input type="text" name="" id="" placeholder="Введіть тему повідомлення" value="Важлива тема" readonly><br>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Введіть повідомлення" required></textarea><br>
+                    <input type="text" name="" id="" placeholder="Введіть тему повідомлення" value="Важлива тема"
+                        readonly><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Введіть повідомлення"
+                        required></textarea><br>
                     <input type="url" name="" id="" placeholder="Введіть url" required><br>
                     <input type="submit" value="Відправити">
                 </form>
@@ -242,13 +272,16 @@
                 <dialog open>
                     This is a dialog box!
                 </dialog>
-                <meter min="0" low="16" high="92" value="50"  max="100">Alex</meter>
+                <meter min="0" low="16" high="92" value="50" max="100">Alex</meter>
                 <progress value="71" max="100">Alex</progress>
             </article>
         </section>
         <aside>
             <figure>
-                <a href="https://google.com"><img src="picture.jpg" width="200" alt="Природа у JPG"></a>
+                <a href="https://google.com">
+                    <div class="filter-block"><img class="filter-img" src="picture.jpg" width="200" alt="Природа у JPG">
+                    </div>
+                </a>
                 <figcaption>Рисунок 1 - Природа у JPG</figcaption>
             </figure>
             <br>

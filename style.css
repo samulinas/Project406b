@@ -196,7 +196,7 @@ tr > td:nth-last-child(1) {
 
 nav {
   display: inline-block;
-/*   margin: 5px 5px 10px 15px; */
+  /*   margin: 5px 5px 10px 15px; */
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -207,7 +207,7 @@ nav {
   box-sizing: border-box;
   visibility: visible;
   border: 10px dashed black;
-  outline: 10px solid green;;
+  outline: 10px solid green;
 }
 @media all and (max-width: 1200px) {
   section {
@@ -241,21 +241,26 @@ nav {
 .container > :nth-child(2) {
   float: right;
   margin-left: -50px;
-  background: linear-gradient(99deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: linear-gradient(
+    99deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
   z-index: 1;
 }
 .bg-prop {
   margin: 20px;
   width: 400px;
   height: 250px;
-/*   background-color: azure;
+  /*   background-color: azure;
   background-image: url("picture.jpg");
   background-size: 400px 100%;
   background-position: top left;
   background-repeat: no-repeat;
   background-clip: border-box;
   background-attachment: local; */
-  background: azure url("picture.jpg") center / 380px 100% no-repeat padding-box local;
+  background: azure url("picture.jpg") center / 380px 100% no-repeat padding-box
+    local;
   padding: 10px;
   /* border: 10px solid rgba(22, 231, 22, 0.5); */
   border-width: 10px;
@@ -268,7 +273,7 @@ nav {
   border-bottom-style: dotted;
   border-right-style: hidden;
   border-left-style: double;
-  border-color:rgba(0, 52, 238, 0.6);
+  border-color: rgba(0, 52, 238, 0.6);
   border-top-color: rgba(0, 52, 238, 0.6);
   border-bottom-color: green;
   border-right-color: #fff;
@@ -286,7 +291,7 @@ nav {
   box-sizing: border-box;
   color: white;
   box-shadow: 4px 4px 15px black;
-/*   font-family: "Neue Machina", sans-serif;
+  /*   font-family: "Neue Machina", sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
@@ -317,14 +322,15 @@ center {
 time {
   border: 10px solid pink;
 }
-.main-time, #unic-time {
+.main-time,
+#unic-time {
   border: 5px solid red;
 }
 h1 {
   caret-color: red;
   cursor: pointer;
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .hypertext {
   user-select: none;
@@ -332,7 +338,7 @@ h1 {
   text-orientation: mixed;
 }
 textarea {
-  resize: both;
+  resize: none;
 }
 img {
   pointer-events: none;
@@ -344,6 +350,154 @@ table {
   empty-cells: hide;
 }
 td {
-  vertical-align: bottom;
-  table-layout: auto;
+  border: 2px dashed blue;
+  width: 300px;
+  vertical-align: center;
+  table-layout: fixed;
+}
+.td-block {
+  display: block;
+  height: 200px;
+  width: 100%;
+  text-align: justify;
+  /* column-count: 3; */
+  column-fill: balance;
+  column-rule: 1px solid black;
+  column-gap: 21px;
+  column-width: 150px;
+  overflow: hidden;
+}
+.td-block > div {
+  column-span: all;
+  background: pink;
+}
+.ol-list {
+  /* list-style: lower-greek inside; */
+  list-style-type: lower-greek;
+  list-style-position: inside;
+  /* list-style-image: url(/favicon.ico); */
+}
+.ol-list > li {
+  background: pink;
+}
+.filter-block {
+  width: 200px;
+  height: 400px;
+  overflow: hidden;
+}
+.filter-img {
+  /*   filter: blur(30px); */
+  filter: brightness(120%) contrast(150%) grayscale(50%);
+}
+.container > div:first-child {
+  width: 200px;
+  background: #0000ff;
+  opacity: 1;
+  transition: all 2s ease-in-out 0s;
+}
+.container > div:first-child:hover {
+  width: 100%;
+  background: #7070f1;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2000ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.container > div:nth-child(2) {
+  float: right;
+  transition: all 1s linear 0s;
+}
+.container > div:nth-child(2):hover {
+  transform: scale(1.5, 1.5);
+  transition: all 1s linear 0s;
+}
+.container > div:nth-child(3) {
+  float: right;
+  margin-right: 80px;
+  animation-name: translate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes translate {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, -30px);
+  }
+}
+.container > div:nth-child(4) {
+  float: right;
+  margin-right: 30px;
+}
+.container > div:nth-child(4) {
+  float: right;
+  margin-right: 30px;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container > div:nth-child(5) {
+  float: right;
+  margin-right: 30px;
+  animation-name: skew;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-play-state: running;
+}
+@keyframes skew {
+  0% {
+    transform: skew(0, 0);
+  }
+  50% {
+    transform: skew(20deg, 20deg);
+  }
+  100% {
+    transform: skew(0, 0);
+  }
+}
+.flex-block {
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  border: 5px solid black;
+  width: 800px;
+  height: 200px;
+  overflow: hidden;
+}
+.flex-block > div {
+  display: flex;
+  flex-basis: calc( 800px / 3 );
+  background: green;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items:flex-start;
+  flex-grow: 1;
+}
+.flex-block > div:nth-child(4) {
+  align-self: flex-start;
+  order: 1;
+  background: pink;
+  flex-grow: 2;
+  flex: 2 0 inherit;
 }
